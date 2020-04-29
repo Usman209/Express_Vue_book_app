@@ -4,7 +4,8 @@
   "description": "Express_Vue_book_app",
   "main": "index.js",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "node-emoji": "^1.10.0"
   },
   "devDependencies": {},
   "scripts": {
