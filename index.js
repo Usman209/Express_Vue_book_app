@@ -2,6 +2,12 @@ const express = require('express')
 const app = express();
 const sequare = require('./export')
 const route =require('./route')
+const emoji = require('node-emoji');
+
+const { log } = console;
+const pizza = emoji.get('pizza');
+const message = `It's time for ${pizza}!`;
+log(message);
 
 app.get('/', function (req, res) {
     res.send('Text form express index.js')
