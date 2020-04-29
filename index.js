@@ -3,6 +3,7 @@ const app = express();
 const sequare = require('./export')
 const route =require('./route')
 const emoji = require('node-emoji');
+const logger = require('morgan')
 
 const { log } = console;
 const pizza = emoji.get('pizza');
@@ -16,7 +17,8 @@ app.get('/', function (req, res) {
 console.log('sequare function from other file is here  ' + sequare.area(5))
 console.log('perimeter function from other file is here  ' + sequare.perimeter(5))
 
-app.use('/mysite',route)
+app.use('/mysite', route)
+app.use(logger('dev'))
 
 app.listen(3000, function () {
     console.log('app listening on port 3000')
